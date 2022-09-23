@@ -19,6 +19,8 @@ const UserSchema = new mongoose.Schema({
         required: true
     },
     tempPinHash: String,
+    bio: String,
+    website: String,
 })
 
 const UserModel = new mongoose.model('User', UserSchema )
