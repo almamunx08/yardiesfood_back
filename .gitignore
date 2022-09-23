@@ -1,0 +1,6 @@
+node_modules
+storage/video/*
+storage/thumbnail/*
+!storage/video/Readme
+!storage/thumbnail/Readme
+.env
