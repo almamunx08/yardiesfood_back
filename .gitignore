@@ -4,3 +4,4 @@ storage/thumbnail/*
 !storage/video/Readme
 !storage/thumbnail/Readme
 .env
+public/img/*
