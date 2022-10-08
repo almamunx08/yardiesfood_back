@@ -17,7 +17,11 @@ const RecipeSchema = mongoose.Schema({
       step: String,
       img : String,
    }],
-   note : String
+   note : String,
+   owner : {
+      type: mongoose.Schema.Types.ObjectId,
+      ref : 'User'
+   }
 })
 
 const RecipeModel = mongoose.model("Recipe", RecipeSchema)
