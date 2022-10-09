@@ -21,7 +21,15 @@ const RecipeSchema = mongoose.Schema({
    owner : {
       type: mongoose.Schema.Types.ObjectId,
       ref : 'User'
-   }
+   },
+   like : [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref : 'User'
+   }],
+   unlike: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref : 'User'
+   }]
 })
 
 const RecipeModel = mongoose.model("Recipe", RecipeSchema)
