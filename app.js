@@ -8,6 +8,8 @@ const UserRoute = require('./Routes/UserRoute/UserRoute');
 const whoIs = require('./Middleware/whois');
 const fileUploadController = require('./Controllers/FileUploadController/FileUploadController');
 const RecipeRoute = require('./Routes/RecipeRoute/RecipeRoute');
+const CookbookRoute = require('./Routes/CookbookRoute/CookbookRoute');
+const MenuRoute = require('./Routes/MenuRoute/MenuRoute');
 const PORT = process.env.PORT || 8000
 
 app.use(express.static('./public'))
@@ -19,6 +21,8 @@ app.use('/api/auth', AuthRoute)
 app.use('/api/user', whoIs, UserRoute)
 app.use('/api/fileUpload', fileUploadController)
 app.use('/api/recipe', RecipeRoute)
+app.use('/api/cookbook', CookbookRoute)
+app.use('/api/menu', MenuRoute)
 
 app.listen(PORT, function () {
     console.log("Listening on port "+PORT);
